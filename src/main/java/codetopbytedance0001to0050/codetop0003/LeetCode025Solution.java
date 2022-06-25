@@ -1,28 +1,8 @@
-package codetoplistbytedance;
+package codetopbytedance0001to0050.codetop0003;
 
 import struct.ListNode;
 
-
-public class CodeTop0003LeetCode0025 {
-
-    /**
-     *
-     * @param head
-     * @param tail
-     * @return      返回的[] 0 位上是反转后的 head;
-     *                      1 位上是反转后的 tail;
-     */
-    private ListNode[] reverse(ListNode head, ListNode tail){
-        ListNode prev = tail.next;
-        ListNode curr = head;
-        while (prev != tail){
-            ListNode next = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = next;
-        }
-        return new ListNode[]{tail, head};
-    }
+public class LeetCode025Solution {
 
     public ListNode reverseKGroup(ListNode head, int k) {
 
@@ -59,5 +39,25 @@ public class CodeTop0003LeetCode0025 {
 
         return dummyHead.next;
     }
+
+    /**
+     *
+     * @param head
+     * @param tail
+     * @return      返回的[] 0 位上是反转后的 head;
+     *                      1 位上是反转后的 tail;
+     */
+    private ListNode[] reverse(ListNode head, ListNode tail){
+        ListNode prev = tail.next;
+        ListNode curr = head;
+        while (prev != tail){
+            ListNode next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        return new ListNode[]{tail, head};
+    }
+
 
 }
