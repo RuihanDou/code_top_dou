@@ -17,6 +17,7 @@ public class LeetCode054Solution {
 
         int left = 0, right = columns - 1, top = 0, bottom = rows - 1;
 
+        // 每个循环只考虑一层
         while (left <= right && top <= bottom){
 
             for(int column = left; column <= right; column++){
